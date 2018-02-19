@@ -1,0 +1,1805 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{483DA091-C22A-449D-862F-169EE0444C49}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WFA_Exemplos</RootNamespace>
+    <AssemblyName>WFA_Exemplos</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>c:\Servers\Teste\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Distribuicao\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>
+    </NoWarn>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisIgnoreGeneratedCode>false</CodeAnalysisIgnoreGeneratedCode>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Distribuicao\</OutputPath>
+    <DefineConstants>TRACE;XXX</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>467;618;169;649</NoWarn>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisIgnoreGeneratedCode>false</CodeAnalysisIgnoreGeneratedCode>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>291346D51ABC7BA3E39ADD09BFE3E25A7067EA3B</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>WFA_Exemplos_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DocumentationFile>
+    </DocumentationFile>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <OutputPath>Distribuicao\</OutputPath>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningsAsErrors>
+    </WarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <DocumentationFile>
+    </DocumentationFile>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <OutputPath>Distribuicao\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningsAsErrors>
+    </WarningsAsErrors>
+    <NoWarn>
+    </NoWarn>
+    <WarningLevel>0</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BgmRodotec.FGlobus.Componentes.WinForms, Version=1.0.5856.31640, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Distribuicao\BgmRodotec.FGlobus.Componentes.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="BgmRodotec.FGlobus.Comum, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Distribuicao\BgmRodotec.FGlobus.Comum.dll</HintPath>
+    </Reference>
+    <Reference Include="BgmRodotec.FGlobus.Excecao, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Distribuicao\BgmRodotec.FGlobus.Excecao.dll</HintPath>
+    </Reference>
+    <Reference Include="BgmRodotec.FGlobus.Mensagens, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Distribuicao\BgmRodotec.FGlobus.Mensagens.dll</HintPath>
+    </Reference>
+    <Reference Include="BgmRodotec.FGlobus.NFe, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Distribuicao\BgmRodotec.FGlobus.NFe.dll</HintPath>
+    </Reference>
+    <Reference Include="BgmRodotec.FGlobus.Relatorios, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Distribuicao\BgmRodotec.FGlobus.Relatorios.dll</HintPath>
+    </Reference>
+    <Reference Include="BgmRodotec.FGlobus.Skin, Version=11.2.7.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Distribuicao\BgmRodotec.FGlobus.Skin.dll</HintPath>
+    </Reference>
+    <Reference Include="BgmRodotec.FGlobus.Util, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Distribuicao\BgmRodotec.FGlobus.Util.dll</HintPath>
+    </Reference>
+    <Reference Include="BgmRodotec.Globus5.Cadastros.Frota">
+      <HintPath>..\..\..\..\..\..\..\GlobusMais\WPF\Distribuicao\BgmRodotec.Globus5.Cadastros.Frota.dll</HintPath>
+    </Reference>
+    <Reference Include="BgmRodotec.Globus5.Comum">
+      <HintPath>..\..\..\..\..\..\..\GlobusMais\WPF\Distribuicao\BgmRodotec.Globus5.Comum.dll</HintPath>
+    </Reference>
+    <Reference Include="BgmRodotec.Globus5.WebReferences, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\GlobusMais\WebReferences\WebReferences\Distribuicao\BgmRodotec.Globus5.WebReferences.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.BonusSkins.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Charts.v11.2.Core, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v11.2.Core, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v11.2.Core, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Reports.v11.2.Designer, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v11.2.Core, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.SpellChecker.v11.2.Core, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpf.Charts.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpf.Core.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpf.Docking.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpf.Gauges.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpf.Grid.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpf.Grid.v11.2.Core, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpf.LayoutControl.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpf.Themes.Demo.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpf.Themes.LightGray.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpf.Themes.MetropolisDark.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpf.Themes.Office2007Black.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpf.Themes.Office2007Blue.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpf.Themes.Office2007Silver.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpf.Themes.Office2010Black.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpf.Themes.Seven.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v11.2.UI, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v11.2.Core, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v11.2.Win, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v11.2.Design, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraLayout.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPivotGrid.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v11.2.Extensions, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v11.2.Extensions, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v11.2.Core, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v11.2.Extensions, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraSpellChecker.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraWizard.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="EnvDTE80, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Extensibility, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualStudio.OLE.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.8.0, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.VisualStudio.TextManager.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.VisualStudio.TextManager.Interop.8.0, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="VSLangProj, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="VSLangProj80, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="aaaaaaaaaa\FrmTesteXD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="aaaaaaaaaa\FrmTesteXD.Designer.cs">
+      <DependentUpon>FrmTesteXD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GroupControlBGM\GroupControlBGMDemoX.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GroupControlBGM\GroupControlBGMDemoX.Designer.cs">
+      <DependentUpon>GroupControlBGMDemoX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssociacaoBGM\Frmxxxxxx.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssociacaoBGM\Frmxxxxxx.Designer.cs">
+      <DependentUpon>Frmxxxxxx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssociacaoBGM\FormOk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssociacaoBGM\FormOk.Designer.cs">
+      <DependentUpon>FormOk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssociacaoBGM\FrmAssociacaoBGM3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssociacaoBGM\FrmAssociacaoBGM3.Designer.cs">
+      <DependentUpon>FrmAssociacaoBGM3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssociacaoBGM\FrmAssociacaoBGM4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssociacaoBGM\FrmAssociacaoBGM4.Designer.cs">
+      <DependentUpon>FrmAssociacaoBGM4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssociacaoBGM\xxxxxxxxxxxxxx.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AssociacaoBGM\xxxxxxxxxxxxxx.Designer.cs">
+      <DependentUpon>xxxxxxxxxxxxxx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ButtonEditBGM\ButtonEditBaseDemo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ButtonEditBGM\ButtonEditBaseDemo.Designer.cs">
+      <DependentUpon>ButtonEditBaseDemo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ButtonEditBGM\ButtonEditDemo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ButtonEditBGM\ButtonEditDemo.Designer.cs">
+      <DependentUpon>ButtonEditDemo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ButtonEditBGM\FrmButtonEditBGM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ButtonEditBGM\FrmButtonEditBGM.Designer.cs">
+      <DependentUpon>FrmButtonEditBGM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ButtonEditBGM\RepositoryItemBaseButtonEdit.cs" />
+    <Compile Include="ButtonEditBGM\TextButtonBGM.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ConectaNoBanco\FrmConectaNoBanco.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConectaNoBanco\FrmConectaNoBanco.Designer.cs">
+      <DependentUpon>FrmConectaNoBanco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomizarGridControl\FrmCustomGridBGM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomizarGridControl\FrmCustomGridBGM.Designer.cs">
+      <DependentUpon>FrmCustomGridBGM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FiltroDinamico\FrmFiltroDinamicoBGM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FiltroDinamico\FrmFiltroDinamicoBGM.Designer.cs">
+      <DependentUpon>FrmFiltroDinamicoBGM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FiltroRelatorio\FrmXXXX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FiltroRelatorio\FrmXXXX.Designer.cs">
+      <DependentUpon>FrmXXXX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FiltroRelatorio\FrmFiltroRelatorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FiltroRelatorio\FrmFiltroRelatorio.Designer.cs">
+      <DependentUpon>FrmFiltroRelatorio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GEDConsultaDeDocumentos\FrmConsultaDeDocumentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GEDConsultaDeDocumentos\FrmConsultaDeDocumentos.Designer.cs">
+      <DependentUpon>FrmConsultaDeDocumentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GroupControlBGM\GroupControlBGMDemoXOcultar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GroupControlBGM\GroupControlBGMDemoXOcultar.Designer.cs">
+      <DependentUpon>GroupControlBGMDemoXOcultar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GroupControlBGM\UITypeEditorBGMRodotec.cs" />
+    <Compile Include="Mascaras\FrmDateEditBGM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mascaras\FrmDateEditBGM.designer.cs">
+      <DependentUpon>FrmDateEditBGM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMonitorThreadsHandlesAndBytes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMonitorThreadsHandlesAndBytes.Designer.cs">
+      <DependentUpon>FrmMonitorThreadsHandlesAndBytes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FiltroRelatorio\FrmDateNavigator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FiltroRelatorio\FrmDateNavigator.Designer.cs">
+      <DependentUpon>FrmDateNavigator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssemblyInfo\FrmAssemblyInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssemblyInfo\FrmAssemblyInfo.Designer.cs">
+      <DependentUpon>FrmAssemblyInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssociacaoBGM\AssociacaoBGMDemo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AssociacaoBGM\AssociacaoBGMDemo.designer.cs">
+      <DependentUpon>AssociacaoBGMDemo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ButtonEditBGM\Class1ss.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AssociacaoBGM\FrmAssociacaoBGM1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssociacaoBGM\FrmAssociacaoBGM1.Designer.cs">
+      <DependentUpon>FrmAssociacaoBGM1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssociacaoBGM\FrmAssociacaoBGM2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssociacaoBGM\FrmAssociacaoBGM2.Designer.cs">
+      <DependentUpon>FrmAssociacaoBGM2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssociacaoBGM\TesteCollection.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AssociacaoBGM\TesteCollection.Designer.cs">
+      <DependentUpon>TesteCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssociacaoBGM\Class2.cs" />
+    <Compile Include="AssociacaoBGM\Class3.cs" />
+    <Compile Include="AssociacaoBGM\FrmAssociacaoBGMDemo2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssociacaoBGM\FrmAssociacaoBGMDemo2.Designer.cs">
+      <DependentUpon>FrmAssociacaoBGMDemo2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomizarGridControl\CustomizarGridControlVisaoGrafico.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomizarGridControl\CustomizarGridControlVisaoGrafico.designer.cs">
+      <DependentUpon>CustomizarGridControlVisaoGrafico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomizarGridControl\CustomizarGridControlDemo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomizarGridControl\CustomizarGridControlDemo.designer.cs">
+      <DependentUpon>CustomizarGridControlDemo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomizarGridControl\FrmCustomizarGridControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomizarGridControl\FrmCustomizarGridControl.designer.cs">
+      <DependentUpon>FrmCustomizarGridControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Destaque\DestaqueDemo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Destaque\DestaqueDemo.designer.cs">
+      <DependentUpon>DestaqueDemo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Destaque\FrmDestaque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Destaque\FrmDestaque.Designer.cs">
+      <DependentUpon>FrmDestaque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diversos\FrmDadosSistemaOperacional.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diversos\FrmDadosSistemaOperacional.Designer.cs">
+      <DependentUpon>FrmDadosSistemaOperacional.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diversos\FrmNHibernate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diversos\FrmNHibernate.Designer.cs">
+      <DependentUpon>FrmNHibernate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diversos\FrmWebBrowserStream.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diversos\FrmWebBrowserStream.Designer.cs">
+      <DependentUpon>FrmWebBrowserStream.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Grids\FrmDragDrop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Grids\FrmDragDrop.Designer.cs">
+      <DependentUpon>FrmDragDrop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diversos\FrmConecTFS2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diversos\FrmConecTFS2.designer.cs">
+      <DependentUpon>FrmConecTFS2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diversos\FrmFloatingWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diversos\FrmFloatingWindow.Designer.cs">
+      <DependentUpon>FrmFloatingWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diversos\FrmLendoArqResource.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diversos\FrmLendoArqResource.Designer.cs">
+      <DependentUpon>FrmLendoArqResource.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diversos\FrmMensagemBGM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diversos\FrmMensagemBGM.Designer.cs">
+      <DependentUpon>FrmMensagemBGM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diversos\FrmPopulaPropriedadeItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diversos\FrmPopulaPropriedadeItem.Designer.cs">
+      <DependentUpon>FrmPopulaPropriedadeItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diversos\FrmDataBindings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diversos\FrmDataBindings.Designer.cs">
+      <DependentUpon>FrmDataBindings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GroupControlBGM\FrmGroupControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GroupControlBGM\FrmGroupControl.Designer.cs">
+      <DependentUpon>FrmGroupControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GroupControlBGM\GroupControlBGMDemo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GroupControlBGM\GroupControlBGMDemo.Designer.cs">
+      <DependentUpon>GroupControlBGMDemo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InscricaoEstadual\FrmInscricaoEstadual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InscricaoEstadual\FrmInscricaoEstadual.Designer.cs">
+      <DependentUpon>FrmInscricaoEstadual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mascaras\ButtonEditBGMX.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mascaras\ButtonEditBGMX.Designer.cs">
+      <DependentUpon>ButtonEditBGMX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mascaras\CalcEditBGMX.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mascaras\CalcEditBGMX.Designer.cs">
+      <DependentUpon>CalcEditBGMX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mascaras\DateEditBGMX.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mascaras\DateEditBGMX.Designer.cs">
+      <DependentUpon>DateEditBGMX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mascaras\Mascaras.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Mascaras\Mascaras.Designer.cs">
+      <DependentUpon>Mascaras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mascaras\TextEditBGMDemo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mascaras\TextEditBGMDemo.Designer.cs">
+      <DependentUpon>TextEditBGMDemo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mascaras\FrmMascaras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mascaras\FrmMascaras.Designer.cs">
+      <DependentUpon>FrmMascaras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mask\FrmMask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mask\FrmMask.Designer.cs">
+      <DependentUpon>FrmMask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mask\MaskedEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mask\MaskedTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="multithreading\FrmMultiThreading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="multithreading\FrmMultiThreading.Designer.cs">
+      <DependentUpon>FrmMultiThreading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="multithreading\Words.cs" />
+    <Compile Include="NFE\FrmNFe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NFE\FrmNFe.Designer.cs">
+      <DependentUpon>FrmNFe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OcultarPropriedade\CmpOcultarPropriedade.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="OcultarPropriedade\CmpOcultarPropriedade.Designer.cs">
+      <DependentUpon>CmpOcultarPropriedade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OcultarPropriedade\FrmOcultarPropriedade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OcultarPropriedade\FrmOcultarPropriedade.Designer.cs">
+      <DependentUpon>FrmOcultarPropriedade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPrincipal.Designer.cs">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Grids\FrmRepositoryItemMemoExEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Grids\FrmRepositoryItemMemoExEdit.Designer.cs">
+      <DependentUpon>FrmRepositoryItemMemoExEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diversos\FrmTamanhoMemoEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diversos\FrmTamanhoMemoEdit.Designer.cs">
+      <DependentUpon>FrmTamanhoMemoEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelecionaDescricao\ColunasSelecionaDescricaoDemo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SelecionaDescricao\ColunasSelecionaDescricaoDemo.Designer.cs">
+      <DependentUpon>ColunasSelecionaDescricaoDemo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelecionaDescricao\FrmSelecionaDescricao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelecionaDescricao\FrmSelecionaDescricao.Designer.cs">
+      <DependentUpon>FrmSelecionaDescricao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RadioGroupBGM\FrmRadioGroupBGM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RadioGroupBGM\FrmRadioGroupBGM.Designer.cs">
+      <DependentUpon>FrmRadioGroupBGM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RadioGroupBGM\RadioGroupBGMDemo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RadioGroupBGM\RadioGroupBGMDemo.Designer.cs">
+      <DependentUpon>RadioGroupBGMDemo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelecionaDescricao\SelecionaDescricaoBGMDemo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SelecionaDescricao\SelecionaDescricaoBGMDemo.designer.cs">
+      <DependentUpon>SelecionaDescricaoBGMDemo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceReference1\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Shortcut\FrmSimpleButtonComShortcut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Shortcut\FrmSimpleButtonComShortcut.Designer.cs">
+      <DependentUpon>FrmSimpleButtonComShortcut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shortcut\SimpleButtonComShortcut.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Shortcut\SimpleButtonComShortcut.Designer.cs">
+      <DependentUpon>SimpleButtonComShortcut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SimpleButton\FrmSimpleButtonBGM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SimpleButton\FrmSimpleButtonBGM.Designer.cs">
+      <DependentUpon>FrmSimpleButtonBGM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SimpleButton\SimpleButtonBGMDemo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SimpleButton\SimpleButtonBGMDemo.Designer.cs">
+      <DependentUpon>SimpleButtonBGMDemo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SplitContainerDemo\SplitContainerDemo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SplitContainerDemo\SplitContainerDemo.Designer.cs">
+      <DependentUpon>SplitContainerDemo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelaTags\FrmTelaTags.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaTags\FrmTelaTags.Designer.cs">
+      <DependentUpon>FrmTelaTags.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TesteBinding\FrmTesteBinding.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TesteBinding\FrmTesteBinding.Designer.cs">
+      <DependentUpon>FrmTesteBinding.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TesteBinding\FrmTesteBindingX2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TesteBinding\FrmTesteBindingX2.Designer.cs">
+      <DependentUpon>FrmTesteBindingX2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TesteBinding\TesteBindingX.xaml.cs">
+      <DependentUpon>TesteBindingX.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TesteBinding\TesteBindingX2.xaml.cs">
+      <DependentUpon>TesteBindingX2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TreeList\FrmTreeList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TreeList\FrmTreeList.Designer.cs">
+      <DependentUpon>FrmTreeList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\testeSoapHeader\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\xWebService1\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Workflow\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Workflow\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Workflow\uCtrlWorkflow.xaml.cs">
+      <DependentUpon>uCtrlWorkflow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Diversos\FrmCorretorOrtografico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diversos\FrmCorretorOrtografico.Designer.cs">
+      <DependentUpon>FrmCorretorOrtografico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Grids\FrmGridConstrol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Grids\FrmGridConstrol.Designer.cs">
+      <DependentUpon>FrmGridConstrol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Grids\FrmGridConstrolRepository.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Grids\FrmGridConstrolRepository.Designer.cs">
+      <DependentUpon>FrmGridConstrolRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diversos\FrmTestePerformaceWS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diversos\FrmTestePerformaceWS.Designer.cs">
+      <DependentUpon>FrmTestePerformaceWS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Workflow\FrmWorkflow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Workflow\FrmWorkflow.Designer.cs">
+      <DependentUpon>FrmWorkflow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Legenda\LegendaDemo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Legenda\LegendaDemo.Designer.cs">
+      <DependentUpon>LegendaDemo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diversos\ExemplosUteis.cs" />
+    <Compile Include="Diversos\FrmSmartViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diversos\FrmSmartViewer.Designer.cs">
+      <DependentUpon>FrmSmartViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diversos\FrmConecTFS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diversos\FrmConecTFS.Designer.cs">
+      <DependentUpon>FrmConecTFS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diversos\FrmSerializacaoMetodos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diversos\FrmSerializacaoMetodos.Designer.cs">
+      <DependentUpon>FrmSerializacaoMetodos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diversos\FrmSimpleButtonBGM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diversos\FrmSimpleButtonBGM.Designer.cs">
+      <DependentUpon>FrmSimpleButtonBGM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diversos\FrmLendoDadosDaRede.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diversos\FrmLendoDadosDaRede.Designer.cs">
+      <DependentUpon>FrmLendoDadosDaRede.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diversos\FrmLimparControles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diversos\FrmLimparControles.Designer.cs">
+      <DependentUpon>FrmLimparControles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelaTags\TelaTagsDemo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TelaTags\TelaTagsDemo.Designer.cs">
+      <DependentUpon>TelaTagsDemo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Legenda\uCtlLegenda.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Legenda\uCtlLegenda.Designer.cs">
+      <DependentUpon>uCtlLegenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Diversos\FrmValidatingButtonEditBGM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diversos\FrmValidatingButtonEditBGM.Designer.cs">
+      <DependentUpon>FrmValidatingButtonEditBGM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FiltroRelatorio\UserControlDateNavigator.xaml.cs">
+      <DependentUpon>UserControlDateNavigator.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="aaaaaaaaaa\FrmTesteXD.resx">
+      <DependentUpon>FrmTesteXD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GroupControlBGM\GroupControlBGMDemoX.resx">
+      <DependentUpon>GroupControlBGMDemoX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssociacaoBGM\Frmxxxxxx.resx">
+      <DependentUpon>Frmxxxxxx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssociacaoBGM\FormOk.resx">
+      <DependentUpon>FormOk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssociacaoBGM\FrmAssociacaoBGM3.resx">
+      <DependentUpon>FrmAssociacaoBGM3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssociacaoBGM\FrmAssociacaoBGM4.resx">
+      <DependentUpon>FrmAssociacaoBGM4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssociacaoBGM\xxxxxxxxxxxxxx.resx">
+      <DependentUpon>xxxxxxxxxxxxxx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ButtonEditBGM\FrmButtonEditBGM.resx">
+      <DependentUpon>FrmButtonEditBGM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConectaNoBanco\FrmConectaNoBanco.resx">
+      <DependentUpon>FrmConectaNoBanco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomizarGridControl\FrmCustomGridBGM.resx">
+      <DependentUpon>FrmCustomGridBGM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FiltroDinamico\FrmFiltroDinamicoBGM.resx">
+      <DependentUpon>FrmFiltroDinamicoBGM.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FiltroRelatorio\FrmXXXX.resx">
+      <DependentUpon>FrmXXXX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FiltroRelatorio\FrmFiltroRelatorio.resx">
+      <DependentUpon>FrmFiltroRelatorio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GEDConsultaDeDocumentos\FrmConsultaDeDocumentos.resx">
+      <DependentUpon>FrmConsultaDeDocumentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GroupControlBGM\GroupControlBGMDemoXOcultar.resx">
+      <DependentUpon>GroupControlBGMDemoXOcultar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mascaras\FrmDateEditBGM.resx">
+      <DependentUpon>FrmDateEditBGM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssemblyInfo\FrmAssemblyInfo.resx">
+      <DependentUpon>FrmAssemblyInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssociacaoBGM\AssociacaoBGMDemo.resx">
+      <DependentUpon>AssociacaoBGMDemo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssociacaoBGM\FrmAssociacaoBGM1.resx">
+      <DependentUpon>FrmAssociacaoBGM1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssociacaoBGM\FrmAssociacaoBGM2.resx">
+      <DependentUpon>FrmAssociacaoBGM2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssociacaoBGM\TesteCollection.resx">
+      <DependentUpon>TesteCollection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssociacaoBGM\FrmAssociacaoBGMDemo2.resx">
+      <DependentUpon>FrmAssociacaoBGMDemo2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomizarGridControl\CustomizarGridControlVisaoGrafico.resx">
+      <DependentUpon>CustomizarGridControlVisaoGrafico.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomizarGridControl\CustomizarGridControlDemo.resx">
+      <DependentUpon>CustomizarGridControlDemo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomizarGridControl\FrmCustomizarGridControl.resx">
+      <DependentUpon>FrmCustomizarGridControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Destaque\DestaqueDemo.resx">
+      <DependentUpon>DestaqueDemo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Destaque\FrmDestaque.resx">
+      <DependentUpon>FrmDestaque.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diversos\FrmDadosSistemaOperacional.resx">
+      <DependentUpon>FrmDadosSistemaOperacional.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMonitorThreadsHandlesAndBytes.resx">
+      <DependentUpon>FrmMonitorThreadsHandlesAndBytes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Grids\FrmDragDrop.resx">
+      <DependentUpon>FrmDragDrop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diversos\FrmConecTFS2.resx">
+      <DependentUpon>FrmConecTFS2.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diversos\FrmFloatingWindow.resx">
+      <DependentUpon>FrmFloatingWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diversos\FrmLendoArqResource.resx">
+      <DependentUpon>FrmLendoArqResource.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diversos\FrmMensagemBGM.resx">
+      <DependentUpon>FrmMensagemBGM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diversos\FrmNHibernate.resx">
+      <DependentUpon>FrmNHibernate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diversos\FrmPopulaPropriedadeItem.resx">
+      <DependentUpon>FrmPopulaPropriedadeItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diversos\FrmDataBindings.resx">
+      <DependentUpon>FrmDataBindings.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diversos\FrmWebBrowserStream.resx">
+      <DependentUpon>FrmWebBrowserStream.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GroupControlBGM\FrmGroupControl.resx">
+      <DependentUpon>FrmGroupControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GroupControlBGM\GroupControlBGMDemo.resx">
+      <DependentUpon>GroupControlBGMDemo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InscricaoEstadual\FrmInscricaoEstadual.resx">
+      <DependentUpon>FrmInscricaoEstadual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mascaras\FrmMascaras.resx">
+      <DependentUpon>FrmMascaras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mascaras\Mascaras.resx">
+      <DependentUpon>Mascaras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mask\FrmMask.resx">
+      <DependentUpon>FrmMask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="multithreading\FrmMultiThreading.resx">
+      <DependentUpon>FrmMultiThreading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFE\FrmNFe.resx">
+      <DependentUpon>FrmNFe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OcultarPropriedade\FrmOcultarPropriedade.resx">
+      <DependentUpon>FrmOcultarPropriedade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPrincipal.resx">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Grids\FrmRepositoryItemMemoExEdit.resx">
+      <DependentUpon>FrmRepositoryItemMemoExEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diversos\FrmTamanhoMemoEdit.resx">
+      <DependentUpon>FrmTamanhoMemoEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelecionaDescricao\ColunasSelecionaDescricaoDemo.resx">
+      <DependentUpon>ColunasSelecionaDescricaoDemo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelecionaDescricao\FrmSelecionaDescricao.resx">
+      <DependentUpon>FrmSelecionaDescricao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RadioGroupBGM\FrmRadioGroupBGM.resx">
+      <DependentUpon>FrmRadioGroupBGM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelecionaDescricao\SelecionaDescricaoBGMDemo.resx">
+      <DependentUpon>SelecionaDescricaoBGMDemo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Shortcut\FrmSimpleButtonComShortcut.resx">
+      <DependentUpon>FrmSimpleButtonComShortcut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SimpleButton\FrmSimpleButtonBGM.resx">
+      <DependentUpon>FrmSimpleButtonBGM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SimpleButton\SimpleButtonBGMDemo.resx">
+      <DependentUpon>SimpleButtonBGMDemo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaTags\FrmTelaTags.resx">
+      <DependentUpon>FrmTelaTags.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TesteBinding\FrmTesteBinding.resx">
+      <DependentUpon>FrmTesteBinding.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TesteBinding\FrmTesteBindingX2.resx">
+      <DependentUpon>FrmTesteBindingX2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TreeList\FrmTreeList.resx">
+      <DependentUpon>FrmTreeList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Workflow\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Workflow\FrmWorkflow.resx">
+      <DependentUpon>FrmWorkflow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FiltroRelatorio\FrmDateNavigator.resx">
+      <DependentUpon>FrmDateNavigator.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="NFE\xsd\cancNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NFE\xsd\consCad_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NFE\xsd\consReciNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NFE\xsd\consSitNFe_v2.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NFE\xsd\consStatServ_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NFE\xsd\enviNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NFE\xsd\inutNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NFE\xsd\leiauteCancNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NFE\xsd\leiauteConsSitNFe_v2.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NFE\xsd\leiauteConsStatServ_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NFE\xsd\leiauteConsultaCadastro_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NFE\xsd\leiauteInutNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NFE\xsd\leiauteNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NFE\xsd\nfe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NFE\xsd\procCancNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NFE\xsd\procInutNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NFE\xsd\procNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NFE\xsd\retCancNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NFE\xsd\retConsCad_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NFE\xsd\retConsReciNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NFE\xsd\retConsSitNFe_v2.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NFE\xsd\retConsStatServ_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NFE\xsd\retEnviNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NFE\xsd\retInutNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NFE\xsd\tiposBasico_v1.03.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NFE\xsd\xmldsig-core-schema_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <EmbeddedResource Include="Diversos\FrmCorretorOrtografico.resx">
+      <DependentUpon>FrmCorretorOrtografico.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Grids\FrmGridConstrol.resx">
+      <DependentUpon>FrmGridConstrol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Grids\FrmGridConstrolRepository.resx">
+      <DependentUpon>FrmGridConstrolRepository.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diversos\FrmTestePerformaceWS.resx">
+      <DependentUpon>FrmTestePerformaceWS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Legenda\LegendaDemo.resx">
+      <DependentUpon>LegendaDemo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diversos\FrmSmartViewer.resx">
+      <DependentUpon>FrmSmartViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diversos\FrmConecTFS.resx">
+      <DependentUpon>FrmConecTFS.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diversos\FrmSerializacaoMetodos.resx">
+      <DependentUpon>FrmSerializacaoMetodos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diversos\FrmSimpleButtonBGM.resx">
+      <DependentUpon>FrmSimpleButtonBGM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diversos\FrmLendoDadosDaRede.resx">
+      <DependentUpon>FrmLendoDadosDaRede.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diversos\FrmLimparControles.resx">
+      <DependentUpon>FrmLimparControles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaTags\TelaTagsDemo.resx">
+      <DependentUpon>TelaTagsDemo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Legenda\uCtlLegenda.resx">
+      <DependentUpon>uCtlLegenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diversos\FrmValidatingButtonEditBGM.resx">
+      <DependentUpon>FrmValidatingButtonEditBGM.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\app.manifest" />
+    <None Include="Service References\ServiceReference1\ServiceGinfesImplService.wsdl" />
+    <None Include="Web References\testeSoapHeader\LogGlobusMaisWS.wsdl" />
+    <None Include="Web References\testeSoapHeader\LogVO.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\testeSoapHeader\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\xWebService1\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\xWebService1\webService1.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceReference1\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ServiceReference1\configuration.svcinfo" />
+    <None Include="Service References\ServiceReference1\configuration91.svcinfo" />
+    <None Include="Resources\grafico59.png" />
+    <None Include="Resources\grafico58.png" />
+    <None Include="Resources\grafico57.png" />
+    <None Include="Resources\grafico56.png" />
+    <None Include="Resources\grafico55.png" />
+    <None Include="Resources\grafico54.png" />
+    <None Include="Resources\grafico53.png" />
+    <None Include="Resources\grafico52.png" />
+    <None Include="Resources\grafico51.png" />
+    <None Include="Resources\grafico50.png" />
+    <None Include="Resources\grafico49.png" />
+    <None Include="Resources\grafico48.png" />
+    <None Include="Resources\grafico47.png" />
+    <None Include="Resources\grafico46.png" />
+    <None Include="Resources\grafico45.png" />
+    <None Include="Resources\grafico44.png" />
+    <None Include="Resources\grafico43.png" />
+    <None Include="Resources\grafico42.png" />
+    <None Include="Resources\grafico41.png" />
+    <None Include="Resources\grafico40.png" />
+    <None Include="Resources\grafico39.png" />
+    <None Include="Resources\grafico38.png" />
+    <None Include="Resources\grafico37.png" />
+    <None Include="Resources\grafico36.png" />
+    <None Include="Resources\grafico35.png" />
+    <None Include="Resources\grafico34.png" />
+    <None Include="Resources\grafico33.png" />
+    <None Include="Resources\grafico32.png" />
+    <None Include="Resources\grafico31.png" />
+    <None Include="Resources\grafico30.png" />
+    <None Include="Resources\grafico29.png" />
+    <None Include="Resources\grafico28.png" />
+    <None Include="Resources\grafico27.png" />
+    <None Include="Resources\grafico26.png" />
+    <None Include="Resources\grafico25.png" />
+    <None Include="Resources\grafico24.png" />
+    <None Include="Resources\grafico23.png" />
+    <None Include="Resources\grafico22.png" />
+    <None Include="Resources\grafico21.png" />
+    <None Include="Resources\grafico20.png" />
+    <None Include="Resources\grafico19.png" />
+    <None Include="Resources\grafico18.png" />
+    <None Include="Resources\grafico17.png" />
+    <None Include="Resources\grafico16.png" />
+    <None Include="Resources\grafico15.png" />
+    <None Include="Resources\grafico14.png" />
+    <None Include="Resources\grafico13.png" />
+    <None Include="Resources\grafico12.png" />
+    <None Include="Resources\grafico11.png" />
+    <None Include="Resources\grafico10.png" />
+    <None Include="Resources\grafico9.png" />
+    <None Include="Resources\grafico8.png" />
+    <None Include="Resources\grafico7.png" />
+    <None Include="Resources\grafico6.png" />
+    <None Include="Resources\grafico5.png" />
+    <None Include="Resources\grafico4.png" />
+    <None Include="Resources\grafico3.png" />
+    <None Include="Resources\grafico2.png" />
+    <None Include="Resources\grafico1.png" />
+    <None Include="Resources\ZoomOutLarge_32x32.png" />
+    <None Include="Resources\ZoomOut_16x16.png" />
+    <None Include="Resources\ZoomLarge_32x32.png" />
+    <None Include="Resources\ZoomInLarge_32x32.png" />
+    <None Include="Resources\ZoomIn_16x16.png" />
+    <None Include="Resources\Zoom_16x16.png" />
+    <None Include="Resources\Workflow_32x32.png" />
+    <None Include="Resources\WindowsLarge_32x32.png" />
+    <None Include="Resources\Windows_16x16.png" />
+    <None Include="Resources\WF_Reduzir.png" />
+    <None Include="Resources\WF_Pausar.png" />
+    <None Include="Resources\WF_Ok.png" />
+    <None Include="Resources\WF_Inicio_Disabled.png" />
+    <None Include="Resources\WF_Inicio.png" />
+    <None Include="Resources\WF_EtapaOk.png" />
+    <None Include="Resources\WF_EtapaErro.png" />
+    <None Include="Resources\WF_EtapaAtual.png" />
+    <None Include="Resources\WF_Erro_Disabled.png" />
+    <None Include="Resources\WF_Erro.png" />
+    <None Include="Resources\WF_Continuar_Disabled.png" />
+    <None Include="Resources\WF_Continuar.png" />
+    <None Include="Resources\WF_Banner.png" />
+    <None Include="Resources\WF_Ampliar.png" />
+    <None Include="Resources\WatermarkLarge_32x32.png" />
+    <None Include="Resources\Watermark_16x16.png" />
+    <None Include="Resources\VertSpaceMakeEqual_16x16.png" />
+    <None Include="Resources\VertSpaceIncrease_16x16.png" />
+    <None Include="Resources\VertSpaceDecrease_16x16.png" />
+    <None Include="Resources\VertSpaceConcatenate_16x16.png" />
+    <None Include="Resources\Veiculos.png" />
+    <None Include="Resources\user.png" />
+    <None Include="Resources\UndoLarge_32x32.png" />
+    <None Include="Resources\Undo_16x16.png" />
+    <None Include="Resources\TrocaUsuario16x16.png" />
+    <None Include="Resources\ToolTip.png" />
+    <None Include="Resources\TipoOperacaoBancoNovaAlteracao.png" />
+    <None Include="Resources\TipoOperacaoBancoInclusao.png" />
+    <None Include="Resources\TipoOperacaoBancoExclusao.png" />
+    <None Include="Resources\TipoOperacaoBancoAlteracao.png" />
+    <None Include="Resources\SugestaoFavoritos.png" />
+    <None Include="Resources\subMenu16x16.png" />
+    <None Include="Resources\SizeToGrid_16x16.png" />
+    <None Include="Resources\SizeToControlWidth_16x16.png" />
+    <None Include="Resources\SizeToControlHeight_16x16.png" />
+    <None Include="Resources\SizeToControl_16x16.png" />
+    <None Include="Resources\SimpleButtonBGMAtualizar_23x23.png" />
+    <None Include="Resources\ShowPrevPageLarge_32x32.png" />
+    <None Include="Resources\ShowPrevPage_16x16.png" />
+    <None Include="Resources\ShowNextPageLarge_32x32.png" />
+    <None Include="Resources\ShowNextPage_16x16.png" />
+    <None Include="Resources\ShowLastPageLarge_32x32.png" />
+    <None Include="Resources\ShowLastPage_16x16.png" />
+    <None Include="Resources\ShowFirstPageLarge_32x32.png" />
+    <None Include="Resources\ShowFirstPage_16x16.png" />
+    <None Include="Resources\SendXlsxLarge_32x32.png" />
+    <None Include="Resources\SendXlsx_16x16.png" />
+    <None Include="Resources\SendXlsLarge_32x32.png" />
+    <None Include="Resources\SendXls_16x16.png" />
+    <None Include="Resources\SendTxtLarge_32x32.png" />
+    <None Include="Resources\SendTxt_16x16.png" />
+    <None Include="Resources\SendToBack_16x16.png" />
+    <None Include="Resources\SendRtfLarge_32x32.png" />
+    <None Include="Resources\SendRtf_16x16.png" />
+    <None Include="Resources\SendPdfLarge_32x32.png" />
+    <None Include="Resources\SendPdf_16x16.png" />
+    <None Include="Resources\SendMhtLarge_32x32.png" />
+    <None Include="Resources\SendMht_16x16.png" />
+    <None Include="Resources\SendGraphicLarge_32x32.png" />
+    <None Include="Resources\SendGraphic_16x16.png" />
+    <None Include="Resources\SendFileLarge_32x32.png" />
+    <None Include="Resources\SendFile_16x16.png" />
+    <None Include="Resources\SendCsvLarge_32x32.png" />
+    <None Include="Resources\SendCsv_16x16.png" />
+    <None Include="Resources\ScriptsLarge_32x32.png" />
+    <None Include="Resources\Scripts_16x16.png" />
+    <None Include="Resources\ScaleLarge_32x32.png" />
+    <None Include="Resources\Scale_16x16.png" />
+    <None Include="Resources\SaveLarge_32x32.png" />
+    <None Include="Resources\SaveFileLarge_32x32.png" />
+    <None Include="Resources\SaveFileAsLarge_32x32.png" />
+    <None Include="Resources\SaveFileAs_16x16.png" />
+    <None Include="Resources\SaveFile_16x16.png" />
+    <None Include="Resources\SaveAllLarge_32x32.png" />
+    <None Include="Resources\SaveAll_16x16.png" />
+    <None Include="Resources\Save_16x16.png" />
+    <None Include="Resources\saida16x16.png" />
+    <None Include="Resources\RibbonPrintPreview_PageSetupDialog.png" />
+    <None Include="Resources\responder.png" />
+    <None Include="Resources\Report_16x16.png" />
+    <None Include="Resources\Relatorios.png" />
+    <None Include="Resources\registroLog32x32.png" />
+    <None Include="Resources\registroLog.png" />
+    <None Include="Resources\reFavoritos16x16.png" />
+    <None Include="Resources\RedoLarge_32x32.png" />
+    <None Include="Resources\Redo_16x16.png" />
+    <None Include="Resources\PrintSetupLarge_32x32.png" />
+    <None Include="Resources\PrintSetup_16x16.png" />
+    <None Include="Resources\PrintLarge_32x32.png" />
+    <None Include="Resources\PrintDirectLarge_32x32.png" />
+    <None Include="Resources\PrintDirect_16x16.png" />
+    <None Include="Resources\Print_16x16.png" />
+    <None Include="Resources\Portal_LogoGlobus+.png" />
+    <None Include="Resources\Pointer_16x16.png" />
+    <None Include="Resources\PesquisaBGMConfirmar.png" />
+    <None Include="Resources\PesquisaBGMCancelar.png" />
+    <None Include="Resources\PesquisaBGMAtualizar.png" />
+    <None Include="Resources\PasteLarge_32x32.png" />
+    <None Include="Resources\Paste_16x16.png" />
+    <None Include="Resources\Parametros.png" />
+    <None Include="Resources\ParametersLarge_32x32.png" />
+    <None Include="Resources\Parameters_16x16.png" />
+    <None Include="Resources\PaperSizeLarge_32x32.png" />
+    <None Include="Resources\PaperSize_16x16.png" />
+    <None Include="Resources\PaperKind_Tabloid_32x32.png" />
+    <None Include="Resources\PaperKind_Letter_32x32.png" />
+    <None Include="Resources\PaperKind_Legal_32x32.png" />
+    <None Include="Resources\PaperKind_Executive_32x32.png" />
+    <None Include="Resources\PaperKind_A6_32x32.png" />
+    <None Include="Resources\PaperKind_A5_32x32.png" />
+    <None Include="Resources\PaperKind_A4_32x32.png" />
+    <None Include="Resources\PaperKind_A3_32x32.png" />
+    <None Include="Resources\PageOrientationPortrait_32x32.png" />
+    <None Include="Resources\PageOrientationLarge_32x32.png" />
+    <None Include="Resources\PageOrientationLandscape_32x32.png" />
+    <None Include="Resources\PageOrientation_16x16.png" />
+    <None Include="Resources\PageMarginsWide_48x48.png" />
+    <None Include="Resources\PageMarginsNormal_48x48.png" />
+    <None Include="Resources\PageMarginsNarrow_48x48.png" />
+    <None Include="Resources\PageMarginsModerate_48x48.png" />
+    <None Include="Resources\PageMarginsLarge_32x32.png" />
+    <None Include="Resources\PageMargins_16x16.png" />
+    <None Include="Resources\ortografia16x16.png" />
+    <None Include="Resources\OpenLarge_32x32.png" />
+    <None Include="Resources\OpenFileLarge_32x32.png" />
+    <None Include="Resources\OpenFile_16x16.png" />
+    <None Include="Resources\Open_16x16.png" />
+    <None Include="Resources\Ok.png" />
+    <None Include="Resources\ocultarCampos16x16.png" />
+    <None Include="Resources\NotificacaoResponder_48x48.png" />
+    <None Include="Resources\NotificacaoResponder_32x32.png" />
+    <None Include="Resources\NotificacaoResponder_24x24.png" />
+    <None Include="Resources\NotificacaoResponder_16x16.png" />
+    <None Include="Resources\NotificacaoRecortar_48x48.png" />
+    <None Include="Resources\NotificacaoRecortar_32x32.png" />
+    <None Include="Resources\NotificacaoRecortar_24x24.png" />
+    <None Include="Resources\NotificacaoRecortar_16x16.png" />
+    <None Include="Resources\NotificacaoPara_48x48.png" />
+    <None Include="Resources\NotificacaoPara_32x32.png" />
+    <None Include="Resources\NotificacaoPara_24x24.png" />
+    <None Include="Resources\NotificacaoPara_16x16.png" />
+    <None Include="Resources\NotificacaoNovo_48x48.png" />
+    <None Include="Resources\NotificacaoNovo_32x32.png" />
+    <None Include="Resources\NotificacaoNovo_24x24.png" />
+    <None Include="Resources\NotificacaoNovo_16x16.png" />
+    <None Include="Resources\NotificacaoNotificacoes_48x48.png" />
+    <None Include="Resources\NotificacaoNotificacoes_32x32.png" />
+    <None Include="Resources\NotificacaoNotificacoes_24x24.png" />
+    <None Include="Resources\NotificacaoNotificacoes_16x16.png" />
+    <None Include="Resources\NotificacaoNaoLido_48x48.png" />
+    <None Include="Resources\NotificacaoNaoLido_32x32.png" />
+    <None Include="Resources\NotificacaoNaoLido_24x24.png" />
+    <None Include="Resources\NotificacaoNaoLido_16x16.png" />
+    <None Include="Resources\NotificacaoMensagens_48x48.png" />
+    <None Include="Resources\NotificacaoMensagens_32x32.png" />
+    <None Include="Resources\NotificacaoMensagens_24x24.png" />
+    <None Include="Resources\NotificacaoMensagens_16x16.png" />
+    <None Include="Resources\NotificacaoLixeiraVazia_48x48.png" />
+    <None Include="Resources\NotificacaoLixeiraVazia_32x32.png" />
+    <None Include="Resources\NotificacaoLixeiraVazia_24x24.png" />
+    <None Include="Resources\NotificacaoLixeira_48x48.png" />
+    <None Include="Resources\NotificacaoLixeira_32x32.png" />
+    <None Include="Resources\NotificacaoLixeira_24x24.png" />
+    <None Include="Resources\NotificacaoLido_48x48.png" />
+    <None Include="Resources\NotificacaoLido_32x32.png" />
+    <None Include="Resources\NotificacaoLido_24x24.png" />
+    <None Include="Resources\NotificacaoLido_16x16.png" />
+    <None Include="Resources\NotificacaoImprimir_48x48.png" />
+    <None Include="Resources\NotificacaoImprimir_32x32.png" />
+    <None Include="Resources\NotificacaoImprimir_24x24.png" />
+    <None Include="Resources\NotificacaoImprimir_16x16.png" />
+    <None Include="Resources\NotificacaoExcluir_48x48.png" />
+    <None Include="Resources\NotificacaoExcluir_32x32.png" />
+    <None Include="Resources\NotificacaoExcluir_24x24.png" />
+    <None Include="Resources\NotificacaoExcluir_16x16.png" />
+    <None Include="Resources\NotificacaoEstornar_48x48.png" />
+    <None Include="Resources\NotificacaoEstornar_32x32.png" />
+    <None Include="Resources\NotificacaoEstornar_24x24.png" />
+    <None Include="Resources\NotificacaoEstornar_16x16.png" />
+    <None Include="Resources\NotificacaoEnviarReceber_48x48.png" />
+    <None Include="Resources\NotificacaoEnviarReceber_32x32.png" />
+    <None Include="Resources\NotificacaoEnviarReceber_24x24.png" />
+    <None Include="Resources\NotificacaoEnviarReceber_16x16.png" />
+    <None Include="Resources\NotificacaoEnviar_48x48.png" />
+    <None Include="Resources\NotificacaoEnviar_32x32.png" />
+    <None Include="Resources\NotificacaoEnviar_24x24.png" />
+    <None Include="Resources\NotificacaoEnviar_16x16.png" />
+    <None Include="Resources\NotificacaoEncaminhar_48x48.png" />
+    <None Include="Resources\NotificacaoEncaminhar_32x32.png" />
+    <None Include="Resources\NotificacaoEncaminhar_24x24.png" />
+    <None Include="Resources\NotificacaoEncaminhar_16x16.png" />
+    <None Include="Resources\NotificacaoEmail_48x48.png" />
+    <None Include="Resources\NotificacaoEmail_32x32.png" />
+    <None Include="Resources\NotificacaoEmail_24x24.png" />
+    <None Include="Resources\NotificacaoEmail_16x16.png" />
+    <None Include="Resources\NotificacaoCxSaida_48x48.png" />
+    <None Include="Resources\NotificacaoCxSaida_32x32.png" />
+    <None Include="Resources\NotificacaoCxSaida_24x24.png" />
+    <None Include="Resources\NotificacaoCxEntrada_48x48.png" />
+    <None Include="Resources\NotificacaoCxEntrada_32x32.png" />
+    <None Include="Resources\NotificacaoCxEntrada_24x24.png" />
+    <None Include="Resources\NotificacaoCopiar_48x48.png" />
+    <None Include="Resources\NotificacaoCopiar_32x32.png" />
+    <None Include="Resources\NotificacaoCopiar_24x24.png" />
+    <None Include="Resources\NotificacaoCopiar_16x16.png" />
+    <None Include="Resources\NotificacaoColar_48x48.png" />
+    <None Include="Resources\NotificacaoColar_32x32.png" />
+    <None Include="Resources\NotificacaoColar_24x24.png" />
+    <None Include="Resources\NotificacaoColar_16x16.png" />
+    <None Include="Resources\NotificacaoBaixa_48x48.png" />
+    <None Include="Resources\NotificacaoBaixa_32x32.png" />
+    <None Include="Resources\NotificacaoBaixa_24x24.png" />
+    <None Include="Resources\NotificacaoBaixa_16x16.png" />
+    <None Include="Resources\NotificacaoAtualizar_48x48.png" />
+    <None Include="Resources\NotificacaoAtualizar_32x32.png" />
+    <None Include="Resources\NotificacaoAtualizar_24x24.png" />
+    <None Include="Resources\NotificacaoAtualizar_16x16.png" />
+    <None Include="Resources\NotificacaoAlta_48x48.png" />
+    <None Include="Resources\NotificacaoAlta_32x32.png" />
+    <None Include="Resources\NotificacaoAlta_16x16.png" />
+    <None Include="Resources\Notificacao+.png" />
+    <None Include="Resources\NewReportWizardLarge_32x32.png" />
+    <None Include="Resources\NewReportWizard_16x16.png" />
+    <None Include="Resources\NewReportLarge_32x32.png" />
+    <None Include="Resources\NewReport_16x16.png" />
+    <None Include="Resources\MultiplePagesLarge_32x32.png" />
+    <None Include="Resources\MultiplePages_16x16.png" />
+    <None Include="Resources\MenuPrincipalSkinSilver.png" />
+    <None Include="Resources\MenuPrincipalSkinClean.png" />
+    <None Include="Resources\MenuPrincipalSkinBlack.png" />
+    <None Include="Resources\MenuPrincipal_Servico_16x16.png.png" />
+    <None Include="Resources\MenuPrincipal_Restaurar_16x16.png" />
+    <None Include="Resources\MenuPrincipal_Parametros_16x16.png" />
+    <None Include="Resources\MenuPrincipal_Notificacao.png" />
+    <None Include="Resources\MenuPrincipal_Minimizar_16x16.png" />
+    <None Include="Resources\MenuPrincipal_Mensagem.png" />
+    <None Include="Resources\MenuPrincipal_LogoGlobusMais_FundoEscuro_Transp.png" />
+    <None Include="Resources\MenuPrincipal_LogoGlobusMais_FundoEscuro.png" />
+    <None Include="Resources\MenuPrincipal_LogoGlobusMais.png" />
+    <None Include="Resources\MenuPrincipal_Fundo.jpg" />
+    <None Include="Resources\MenuPrincipal_Fechar_16x16.png" />
+    <None Include="Resources\MenuPrincipal_Favoritos2_16x16.png" />
+    <None Include="Resources\MenuPrincipal_Evento.png" />
+    <None Include="Resources\MenuPrincipal_Comunicado.png" />
+    <None Include="Resources\MenuPrincipal_Alerta.png" />
+    <None Include="Resources\MenuPrincipal_Ajuda_16x16.png" />
+    <None Include="Resources\MensagemPergunta.png" />
+    <None Include="Resources\MensagemInformacao.png" />
+    <None Include="Resources\MensagemErro.png" />
+    <None Include="Resources\Mensagem+.png" />
+    <None Include="Resources\MasterForms16x16_ToolTip.png" />
+    <None Include="Resources\MasterForms16x16_OcultarOuBloquear.png" />
+    <None Include="Resources\MasterForms16x16_LinksUteis.png" />
+    <None Include="Resources\MasterForms16x16_Help.png" />
+    <None Include="Resources\MasterForms16x16_Exit.png" />
+    <None Include="Resources\MasterForms16x16_Check_Ocultar.png" />
+    <None Include="Resources\MasterForms16x16_Check_Default.png" />
+    <None Include="Resources\MasterForms16x16_Check_Bloquear.png" />
+    <None Include="Resources\MasterForms16x16_Agenda.png" />
+    <None Include="Resources\MapaEnderecamento.png" />
+    <None Include="Resources\Magnifier_16x16.png" />
+    <None Include="Resources\Logo_GlobusMais_Terminal_GIF.gif" />
+    <None Include="Resources\Logo_GlobusMais_Terminal.png" />
+    <None Include="Resources\Login_GlobusMais.jpg" />
+    <None Include="Resources\Login_FundoVermelho.png" />
+    <None Include="Resources\Login_FundoAzul.png" />
+    <None Include="Resources\Login_Fechar2.png" />
+    <None Include="Resources\Login_Fechar1.png" />
+    <None Include="Resources\Login_ComplementoNomeModulo.png" />
+    <None Include="Resources\localizarCampos16x16.png" />
+    <None Include="Resources\link16x16.png" />
+    <None Include="Resources\JustifyRight_16x16.png" />
+    <None Include="Resources\JustifyLeft_16x16.png" />
+    <None Include="Resources\JustifyJustify_16x16.png" />
+    <None Include="Resources\JustifyCenter_16x16.png" />
+    <None Include="Resources\ItemBarraItens_SetaParaEsquerda.png" />
+    <None Include="Resources\ItemBarraItens_SetaParaCima.png" />
+    <None Include="Resources\ItemBarraItens_SetaParaBaixo.png" />
+    <None Include="Resources\InstaladorGlobusMais.bmp" />
+    <None Include="Resources\InfoLocalizacao.png" />
+    <None Include="Resources\info16x16.png" />
+    <None Include="Resources\impressora_16x16.png" />
+    <None Include="Resources\HtmlStopLarge_32x32.png" />
+    <None Include="Resources\HtmlStop_16x16.png" />
+    <None Include="Resources\HtmlRefreshLarge_32x32.png" />
+    <None Include="Resources\HtmlRefresh_16x16.png" />
+    <None Include="Resources\HtmlHomeLarge_32x32.png" />
+    <None Include="Resources\HtmlHome_16x16.png" />
+    <None Include="Resources\HtmlForwardLarge_32x32.png" />
+    <None Include="Resources\HtmlForward_16x16.png" />
+    <None Include="Resources\HtmlFindLarge_32x32.png" />
+    <None Include="Resources\HtmlFind_16x16.png" />
+    <None Include="Resources\HtmlBackwardLarge_32x32.png" />
+    <None Include="Resources\HtmlBackward_16x16.png" />
+    <None Include="Resources\HorizSpaceMakeEqual_16x16.png" />
+    <None Include="Resources\HorizSpaceIncrease_16x16.png" />
+    <None Include="Resources\HorizSpaceDecrease_16x16.png" />
+    <None Include="Resources\HorizSpaceConcatenate_16x16.png" />
+    <None Include="Resources\HandTool_16x16.png" />
+    <None Include="Resources\GlobusReport.png" />
+    <None Include="Resources\GED_TipoDocumento.png" />
+    <None Include="Resources\GED_SubCategoria.png" />
+    <None Include="Resources\GED_GED.png" />
+    <None Include="Resources\GED_Documento.png" />
+    <None Include="Resources\GED_Consulta.png" />
+    <None Include="Resources\GED_Categoria.png" />
+    <None Include="Resources\ForeColor_16x16.png" />
+    <None Include="Resources\FontUnderline_16x16.png" />
+    <None Include="Resources\FontItalic_16x16.png" />
+    <None Include="Resources\FontBold_16x16.png" />
+    <None Include="Resources\Font_16x16.png" />
+    <None Include="Resources\FindLarge_32x32.png" />
+    <None Include="Resources\Find_16x16.png" />
+    <None Include="Resources\FillBackgroundLarge_32x32.png" />
+    <None Include="Resources\FillBackground_16x16.png" />
+    <None Include="Resources\ExportXlsxLarge_32x32.png" />
+    <None Include="Resources\ExportXlsx_16x16.png" />
+    <None Include="Resources\ExportXlsLarge_32x32.png" />
+    <None Include="Resources\ExportXls_16x16.png" />
+    <None Include="Resources\ExportTxtLarge_32x32.png" />
+    <None Include="Resources\ExportTxt_16x16.png" />
+    <None Include="Resources\ExportRtfLarge_32x32.png" />
+    <None Include="Resources\ExportRtf_16x16.png" />
+    <None Include="Resources\ExportPdfLarge_32x32.png" />
+    <None Include="Resources\ExportPdf_16x16.png" />
+    <None Include="Resources\ExportMhtLarge_32x32.png" />
+    <None Include="Resources\ExportMht_16x16.png" />
+    <None Include="Resources\ExportHtmLarge_32x32.png" />
+    <None Include="Resources\ExportHtm_16x16.png" />
+    <None Include="Resources\ExportGraphicLarge_32x32.png" />
+    <None Include="Resources\ExportGraphic_16x16.png" />
+    <None Include="Resources\ExportFileLarge_32x32.png" />
+    <None Include="Resources\ExportFile_16x16.png" />
+    <None Include="Resources\ExportCsvLarge_32x32.png" />
+    <None Include="Resources\ExportCsv_16x16.png" />
+    <None Include="Resources\ExitLarge_32x32.png" />
+    <None Include="Resources\Exit_16x16.png" />
+    <None Include="Resources\EnviarNotificacao.png" />
+    <None Include="Resources\Enviar_29x14.png" />
+    <None Include="Resources\Enderecamento.png" />
+    <None Include="Resources\EmailLido.png" />
+    <None Include="Resources\EditPageHFLarge_32x32.png" />
+    <None Include="Resources\EditPageHF_16x16.png" />
+    <None Include="Resources\Edit_16x16.png" />
+    <None Include="Resources\DocumentMapLarge_32x32.png" />
+    <None Include="Resources\DocumentMap_16x16.png" />
+    <None Include="Resources\Document_16x16.png" />
+    <None Include="Resources\dicas16x16.png" />
+    <None Include="Resources\CutLarge_32x32.png" />
+    <None Include="Resources\Cut_16x16.png" />
+    <None Include="Resources\CustomizeLarge_32x32.png" />
+    <None Include="Resources\Customize_16x16.png" />
+    <None Include="Resources\CustomizarGridControlGeral.png" />
+    <None Include="Resources\CustomizarGridControlFormatacao.png" />
+    <None Include="Resources\CustomizarGridControl_LayoutView.png" />
+    <None Include="Resources\CustomizarGridControl_GridView.png" />
+    <None Include="Resources\CustomizarGridControl_Geral.png" />
+    <None Include="Resources\CustomizarGridControl_Format.png" />
+    <None Include="Resources\CustomizarGridControl_CardView.png" />
+    <None Include="Resources\CustomizarGridControl_BandedGridView.png" />
+    <None Include="Resources\CustomizarGridControl_AdvancedBandedGridView.png" />
+    <None Include="Resources\CorretorO_48x48.png" />
+    <None Include="Resources\CorretorO_32x32.png" />
+    <None Include="Resources\CorretorO_24x24.png" />
+    <None Include="Resources\CorretorO_16x16.png" />
+    <None Include="Resources\Corretor_48x48.png" />
+    <None Include="Resources\Corretor_32x321.png" />
+    <None Include="Resources\Corretor_32x32.png" />
+    <None Include="Resources\Corretor_24x241.png" />
+    <None Include="Resources\Corretor_24x24.png" />
+    <None Include="Resources\Corretor_16x161.png" />
+    <None Include="Resources\Corretor_16x16.png" />
+    <None Include="Resources\CopyLarge_32x32.png" />
+    <None Include="Resources\Copy_16x16.png" />
+    <None Include="Resources\ClosePreviewLarge_32x32.png" />
+    <None Include="Resources\ClosePreview_16x16.png" />
+    <None Include="Resources\CenterVertically_16x16.png" />
+    <None Include="Resources\CenterHorizontally_16x16.png" />
+    <None Include="Resources\carregando_106x145.gif" />
+    <None Include="Resources\Cancel.png" />
+    <None Include="Resources\Calendario.png" />
+    <None Include="Resources\Calculadora2.png" />
+    <None Include="Resources\Calculadora.png" />
+    <None Include="Resources\CaixaEntrada.png" />
+    <None Include="Resources\CadastroWorkflow_32x32.png" />
+    <None Include="Resources\CadastraNovaSenha.png" />
+    <None Include="Resources\ButtonEditBGMLupa.png" />
+    <None Include="Resources\BrowseDePesquisaBGMTabPivotGrig.png" />
+    <None Include="Resources\BrowseDePesquisaBGMTabGrid.png" />
+    <None Include="Resources\BrowseDePesquisaBGMTabGrafico.png" />
+    <None Include="Resources\BringToFront_16x16.png" />
+    <None Include="Resources\BackColor_16x16.png" />
+    <None Include="Resources\anotacoes16x16.png" />
+    <None Include="Resources\AlignVerticalCenters_16x16.png" />
+    <None Include="Resources\AlignTop_16x16.png" />
+    <None Include="Resources\AlignToGrid_16x16.png" />
+    <None Include="Resources\AlignRight_16x16.png" />
+    <None Include="Resources\AlignLeft_16x16.png" />
+    <None Include="Resources\AlignHorizontalCenters_16x16.png" />
+    <None Include="Resources\AlignBottom_16x16.png" />
+    <None Include="Resources\ajuda16x16.png" />
+    <None Include="Resources\Agenda.png" />
+    <None Include="Resources\addFavoritos16x16.png" />
+    <None Include="Resources\About_LogoGlobus_25x25.png" />
+    <None Include="Resources\About_BancoDados_32x32.png" />
+    <None Include="Web References\xWebService1\webService1.disco" />
+    <None Include="Resources\Bicha.png" />
+    <None Include="Web References\testeSoapHeader\LogGlobusMaisWS.disco" />
+    <None Include="Resources\DestaqueBGM_Moeda.png" />
+    <None Include="Resources\Saida.png" />
+    <None Include="Resources\Resultados.png" />
+    <None Include="Resources\Operacional.png" />
+    <None Include="Resources\Cadastros.png" />
+    <EmbeddedResource Include="Images\ZoomOut_16x16.png" />
+    <None Include="AssociacaoBGM\associacao\abas.png" />
+    <None Include="AssociacaoBGM\associacao\bg.png" />
+    <None Include="AssociacaoBGM\associacao\full.png" />
+    <None Include="AssociacaoBGM\associacao\horizontal.png" />
+    <None Include="AssociacaoBGM\associacao\vertical.png" />
+    <None Include="AssociacaoBGM\associacao\voltar.png" />
+    <EmbeddedResource Include="Destaque\featured.ico" />
+    <Content Include="Legenda\sem_CollectionEditor.txt" />
+    <Content Include="Legenda\com_CollectionEditor.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SQL.Server.Compact.3.5">
+      <Visible>False</Visible>
+      <ProductName>SQL Server Compact 3.5 SP2</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="TesteBinding\TesteBindingX.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TesteBinding\TesteBindingX2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Workflow\uCtrlWorkflow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FiltroRelatorio\UserControlDateNavigator.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Log\" />
+    <Folder Include="WPFDateNavigator\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://localhost/globus5/webService1.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\xWebService1\</RelPath>
+      <UpdateFromURL>http://localhost/globus5/webService1.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WFA_Exemplos_xWebService1_WebService1</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:54021/LogGlobusMaisWS.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\testeSoapHeader\</RelPath>
+      <UpdateFromURL>http://localhost:54021/LogGlobusMaisWS.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WFA_Exemplos_testeSoapHeader_LogGlobusMaisWS</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ServiceReference1\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <!--To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

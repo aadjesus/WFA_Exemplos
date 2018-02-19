@@ -1,0 +1,173 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Drawing;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+using DevExpress.XtraEditors.Controls;
+using System.ComponentModel.Design;
+using System.Collections;
+using FGlobus.Util;
+
+namespace WFA_Workflow
+{
+    public partial class CmpLegenda : UserControl
+    {
+        public CmpLegenda()
+        {
+            InitializeComponent();
+        }
+
+        private List<EditorButton> _listaEditorButton = null;
+        private ItemLegendaCollection _itemLegendaCollection;
+
+        private void buttonEdit1_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            _listaEditorButton
+                .ForEach(f => f.Visible = !f.Visible);
+
+            if (_listaEditorButton.FirstOrDefault().Visible)
+            {
+                this.Height = 40;
+                this.Top = this.Top - 30;
+            }
+            else
+            {
+                this.Height = 10;
+                this.Top = this.Top + 30;
+            }
+
+        }
+        private void CmpLegenda_Load(object sender, EventArgs e)
+        {
+
+            if (_listaEditorButton == null)
+                _listaEditorButton = this.buttonEdit1.Properties.Buttons
+                    .OfType<EditorButton>()
+                    .ToList();
+        }
+
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Content)]
+        [Editor(typeof(CollectionEditor), typeof(System.Drawing.Design.UITypeEditor))]
+        public ItemLegendaCollection ItensLegenda
+        {
+            get
+            {
+                if (_itemLegendaCollection == null)
+                    _itemLegendaCollection = new ItemLegendaCollection(this);
+
+                return _itemLegendaCollection;
+            }
+        }
+
+        public class ItemLegenda
+        {
+            public ItemLegenda() { }
+
+            public ItemLegenda(string titulo)
+            {
+                _titulo = titulo;
+            }
+
+            public ItemLegenda(string titulo, Color cor)
+            {
+                _titulo = titulo;
+                _cor = cor;
+            }
+
+            public ItemLegenda(string titulo, Color cor, string toolTip)
+            {
+                _titulo = titulo;
+                _cor = cor;
+                _toolTip = toolTip;
+            }
+
+            private string _titulo;
+            private Color _cor = Color.Black;
+            private string _toolTip;
+
+            [Category(Constantes.CATEGORIA)]
+            [DisplayName("Titulo")]
+            [Description("Informa ou retorna o titulo.\nNome: Titulo")]
+            [DefaultValue(null)]
+            public string Titulo
+            {
+                get { return _titulo; }
+                set { _titulo = value; }
+            }
+
+            [Category(Constantes.CATEGORIA)]
+            [DisplayName("Cor")]
+            [Description("Informa ou retorna o titulo.\nNome: Cor")]
+            [DefaultValue(typeof(Color), "Black")]
+            public Color Cor
+            {
+                get { return _cor; }
+                set { _cor = value; }
+            }
+
+            [Category(Constantes.CATEGORIA)]
+            [DisplayName("ToolTip")]
+            [Description("Informa ou retorna o tooltip.\nNome: ToolTip")]
+            [DefaultValue(null)]
+            public string ToolTip
+            {
+                get { return _toolTip; }
+                set { _toolTip = value; }
+            }
+
+            /// <summary>
+            /// 
+            /// </summary>
+            /// <returns>string</returns>
+            public override string ToString()
+            {
+                return String.IsNullOrEmpty(_titulo)
+                    ? base.ToString()
+                    : String.Concat("Titulo= ",
+                                    _titulo,
+                                    (String.IsNullOrEmpty(_toolTip) ? "" : ", ToolTip= " + _toolTip));
+
+            }
+        }
+
+        public sealed class ItemLegendaCollection : CollectionBase
+        {
+            private CmpLegenda _ownerCmpLegenda;
+
+            internal ItemLegendaCollection(CmpLegenda ownerCmpLegenda)
+            {
+                _ownerCmpLegenda = ownerCmpLegenda;
+            }
+
+            public ItemLegenda this[int index]
+            {
+                get
+                {
+                    return List[index] as ItemLegenda;
+                }
+                set
+                {
+                    List[index] = value;
+                    //_ownerCmpLegenda.Invalidate();
+                }
+            }
+
+            public int Add(ItemLegenda itemLegenda)
+            {
+                return base.List.Add(itemLegenda);
+            }
+
+            public void AddRange(ItemLegenda[] listaItemLegenda)
+            {
+                if (listaItemLegenda != null && listaItemLegenda.Count() > 0)
+                    listaItemLegenda
+                        .ToList()
+                        .ForEach(f => this.Add(new ItemLegenda(f.Titulo, f.Cor, f.ToolTip)));
+            }
+        }
+
+    }
+}

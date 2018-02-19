@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://bgmrodotec.com.br/fglobus/controle" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://bgmrodotec.com.br/fglobus/controle" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://bgmrodotec.com.br/fglobus/controle">
+      <s:element name="GravarLog">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="logVO" type="tns:LogVO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="LogVO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="Sistema" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Data" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="TipoBotao" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ItemDeMenu" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NomeAssembly" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TituloCamposChave" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ValorCamposChave" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Complemento" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ListaCampos" type="tns:ArrayOfLogCampoVO" />
+          <s:element minOccurs="0" maxOccurs="1" name="UsuarioSAC" type="tns:LogSACVO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfLogCampoVO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="LogCampoVO" nillable="true" type="tns:LogCampoVO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="LogCampoVO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Nome" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Tipo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Mascara" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Titulo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Valor" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="LogSACVO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="IDLog" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="CodigoFuncionario" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UsuarioSO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Motivo" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GravarLogResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GravarLogResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AutenticacaoWebService" type="tns:AutenticacaoWebService" />
+      <s:complexType name="AutenticacaoWebService">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Token" type="s:int" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="GravarLogBasico">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sistema" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="textoLog" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GravarLogBasicoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GravarLogBasicoResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetornarLog">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="datatInicial" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="datatFinal" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="listaTipoBotao" type="tns:ArrayOfInt" />
+            <s:element minOccurs="0" maxOccurs="1" name="listaItemDeMenu" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfInt">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="int" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="RetornarLogResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetornarLogResult" type="tns:ArrayOfLogVO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfLogVO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="LogVO" nillable="true" type="tns:LogVO" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Teste_1">
+        <s:complexType />
+      </s:element>
+      <s:element name="Teste_1Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Teste_1Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Teste_2">
+        <s:complexType />
+      </s:element>
+      <s:element name="Teste_2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Teste_2Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GravarLogSoapIn">
+    <wsdl:part name="parameters" element="tns:GravarLog" />
+  </wsdl:message>
+  <wsdl:message name="GravarLogSoapOut">
+    <wsdl:part name="parameters" element="tns:GravarLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="GravarLogAutenticacaoWebService">
+    <wsdl:part name="AutenticacaoWebService" element="tns:AutenticacaoWebService" />
+  </wsdl:message>
+  <wsdl:message name="GravarLogBasicoSoapIn">
+    <wsdl:part name="parameters" element="tns:GravarLogBasico" />
+  </wsdl:message>
+  <wsdl:message name="GravarLogBasicoSoapOut">
+    <wsdl:part name="parameters" element="tns:GravarLogBasicoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GravarLogBasicoAutenticacaoWebService">
+    <wsdl:part name="AutenticacaoWebService" element="tns:AutenticacaoWebService" />
+  </wsdl:message>
+  <wsdl:message name="RetornarLogSoapIn">
+    <wsdl:part name="parameters" element="tns:RetornarLog" />
+  </wsdl:message>
+  <wsdl:message name="RetornarLogSoapOut">
+    <wsdl:part name="parameters" element="tns:RetornarLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetornarLogAutenticacaoWebService">
+    <wsdl:part name="AutenticacaoWebService" element="tns:AutenticacaoWebService" />
+  </wsdl:message>
+  <wsdl:message name="Teste_1SoapIn">
+    <wsdl:part name="parameters" element="tns:Teste_1" />
+  </wsdl:message>
+  <wsdl:message name="Teste_1SoapOut">
+    <wsdl:part name="parameters" element="tns:Teste_1Response" />
+  </wsdl:message>
+  <wsdl:message name="Teste_1AutenticacaoWebService">
+    <wsdl:part name="AutenticacaoWebService" element="tns:AutenticacaoWebService" />
+  </wsdl:message>
+  <wsdl:message name="Teste_2SoapIn">
+    <wsdl:part name="parameters" element="tns:Teste_2" />
+  </wsdl:message>
+  <wsdl:message name="Teste_2SoapOut">
+    <wsdl:part name="parameters" element="tns:Teste_2Response" />
+  </wsdl:message>
+  <wsdl:portType name="LogGlobusMaisWSSoap">
+    <wsdl:operation name="GravarLog">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Grava log com os dados do objeto LogVO, e retorna o ID do log gravado.</wsdl:documentation>
+      <wsdl:input message="tns:GravarLogSoapIn" />
+      <wsdl:output message="tns:GravarLogSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GravarLogBasico">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Grava log básico, e retorna o ID do log gravado.</wsdl:documentation>
+      <wsdl:input message="tns:GravarLogBasicoSoapIn" />
+      <wsdl:output message="tns:GravarLogBasicoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetornarLog">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna lista de log's conforme os parâmetros informados.</wsdl:documentation>
+      <wsdl:input message="tns:RetornarLogSoapIn" />
+      <wsdl:output message="tns:RetornarLogSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Teste_1">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Teste - 1</wsdl:documentation>
+      <wsdl:input message="tns:Teste_1SoapIn" />
+      <wsdl:output message="tns:Teste_1SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Teste_2">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Teste - 2</wsdl:documentation>
+      <wsdl:input message="tns:Teste_2SoapIn" />
+      <wsdl:output message="tns:Teste_2SoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="LogGlobusMaisWSSoap" type="tns:LogGlobusMaisWSSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GravarLog">
+      <soap:operation soapAction="http://bgmrodotec.com.br/fglobus/controle/GravarLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GravarLogAutenticacaoWebService" part="AutenticacaoWebService" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GravarLogBasico">
+      <soap:operation soapAction="http://bgmrodotec.com.br/fglobus/controle/GravarLogBasico" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GravarLogBasicoAutenticacaoWebService" part="AutenticacaoWebService" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornarLog">
+      <soap:operation soapAction="http://bgmrodotec.com.br/fglobus/controle/RetornarLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:RetornarLogAutenticacaoWebService" part="AutenticacaoWebService" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Teste_1">
+      <soap:operation soapAction="http://bgmrodotec.com.br/fglobus/controle/Teste_1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:Teste_1AutenticacaoWebService" part="AutenticacaoWebService" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Teste_2">
+      <soap:operation soapAction="http://bgmrodotec.com.br/fglobus/controle/Teste_2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="LogGlobusMaisWSSoap12" type="tns:LogGlobusMaisWSSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GravarLog">
+      <soap12:operation soapAction="http://bgmrodotec.com.br/fglobus/controle/GravarLog" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GravarLogAutenticacaoWebService" part="AutenticacaoWebService" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GravarLogBasico">
+      <soap12:operation soapAction="http://bgmrodotec.com.br/fglobus/controle/GravarLogBasico" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GravarLogBasicoAutenticacaoWebService" part="AutenticacaoWebService" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornarLog">
+      <soap12:operation soapAction="http://bgmrodotec.com.br/fglobus/controle/RetornarLog" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:RetornarLogAutenticacaoWebService" part="AutenticacaoWebService" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Teste_1">
+      <soap12:operation soapAction="http://bgmrodotec.com.br/fglobus/controle/Teste_1" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:Teste_1AutenticacaoWebService" part="AutenticacaoWebService" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Teste_2">
+      <soap12:operation soapAction="http://bgmrodotec.com.br/fglobus/controle/Teste_2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="LogGlobusMaisWS">
+    <wsdl:port name="LogGlobusMaisWSSoap" binding="tns:LogGlobusMaisWSSoap">
+      <soap:address location="http://localhost:54021/LogGlobusMaisWS.asmx" />
+    </wsdl:port>
+    <wsdl:port name="LogGlobusMaisWSSoap12" binding="tns:LogGlobusMaisWSSoap12">
+      <soap12:address location="http://localhost:54021/LogGlobusMaisWS.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
